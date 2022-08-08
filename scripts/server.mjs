@@ -22,6 +22,12 @@ function resolveFile(url) {
         statusCode: 200,
         contentType: "text/html",
       };
+    case "/fixed":
+      return {
+        filePath: "public/fixed.html",
+        statusCode: 200,
+        contentType: "text/html",
+      };
     case "/assets/font/fira-mono-400.woff2":
       return {
         filePath: `public${url}`,
