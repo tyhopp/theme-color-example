@@ -1,9 +1,6 @@
 import http from "http";
 import { readFile } from "fs/promises";
 
-const hostname = "127.0.0.1";
-const port = 8888;
-
 const server = http.createServer((req, res) => listen(req, res));
 
 async function listen(req, res) {
@@ -49,6 +46,6 @@ function resolveFile(url) {
   }
 }
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+server.listen(8000, `localhost`, () => {
+  console.log(`Server running at http://localhost:8000/`);
 });
