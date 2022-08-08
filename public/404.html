@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      :root {
+        --text: #000;
+        --background: #fff;
+        --anchor: royalblue;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --text: #fff;
+          --background: #000;
+        }
+      }
+
+      body {
+        font-family: monospace;
+        color: var(--text);
+        background: var(--background);
+      }
+
+      main {
+        max-width: 450px;
+        line-height: 2em;
+        margin: 0 auto;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      a {
+        color: var(--anchor);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>404</h1>
+    <main>
+      <p>The <a href="/">index page</a> is what you're looking for.</p>
+    </main>
+  </body>
+</html>

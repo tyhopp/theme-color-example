@@ -1,0 +1,20 @@
+{
+  "name": "theme-color-example",
+  "version": "1.0.0",
+  "description": "Shows how desktop Safari behaves when the `<meta name=\"theme-color\" content=\"...\">` tag is omitted and the user's preferred color scheme is `dark`.",
+  "scripts": {
+    "start": "node scripts/server.mjs",
+    "deploy": "firebase deploy --only hosting"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tyhopp/theme-color-example.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tyhopp/theme-color-example/issues"
+  },
+  "homepage": "https://github.com/tyhopp/theme-color-example#readme"
+}
