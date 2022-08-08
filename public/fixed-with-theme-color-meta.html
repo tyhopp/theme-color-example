@@ -3,6 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Browsers now respect the dark color scheme for underlays and scroll bars despite the render-blocking CSS -->
+    <meta name="theme-color" content="#000001" />
+
     <style>
       :root {
         --text: #000;
@@ -20,7 +24,6 @@
         }
       }
 
-      /* These `@font-face` declarations are render-blocking and cause browsers not to respect the the dark color scheme for underlays and scroll bars */
       @font-face {
         font-family: "Fira Mono";
         src: url("assets/font/fira-mono-700.woff2") format("woff2");
@@ -68,23 +71,15 @@
   </head>
   <body>
     <main>
-      <h1>Broken because of render-blocking CSS</h1>
+      <h1>Fixed with theme-color meta tag</h1>
       <p>
         Shows how browsers behave when the user's preferred color scheme is
-        <code>dark</code>, and there is enough render-blocking CSS that the
-        underlays and scroll bars do not respect the dark color scheme
-        preference.
+        <code>dark</code> and the
+        <code>&lt;meta name="theme-color" content="..." /&gt;</code> is set.
       </p>
       <p>
-        To see it fixed by reducing render-blocking CSS, visit
-        <a href="fixed-with-reduced-render-blocking-css">this</a> page in a new
+        To see it broken, visit the <a href="/">index</a> page in a new
         incognito window.
-      </p>
-      <p>
-        To see it fixed using the
-        <code>&lt;meta name="theme-color" content="..." /&gt;</code> tag, visit
-        <a href="fixed-with-theme-color-meta">this</a> page in a new incognito
-        window.
       </p>
     </main>
   </body>

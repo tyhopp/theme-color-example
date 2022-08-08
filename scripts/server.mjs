@@ -19,9 +19,10 @@ function resolveFile(url) {
         statusCode: 200,
         contentType: "text/html",
       };
-    case "/fixed":
+    case "/fixed-with-reduced-render-blocking-css":
+    case "/fixed-with-theme-color-meta":
       return {
-        filePath: "public/fixed.html",
+        filePath: `public${url}.html`,
         statusCode: 200,
         contentType: "text/html",
       };

@@ -3,10 +3,6 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- If you uncomment this, then browsers respect the dark color scheme for underlays and scroll bars -->
-    <meta name="theme-color" content="#000001" />
-
     <style>
       :root {
         --text: #000;
@@ -24,22 +20,8 @@
         }
       }
 
-      @font-face {
-        font-family: "Fira Mono";
-        src: url("assets/font/fira-mono-700.woff2") format("woff2");
-        font-weight: 700;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "Fira Mono";
-        src: url("assets/font/fira-mono-400.woff2") format("woff2");
-        font-weight: 400;
-        font-display: swap;
-      }
-
       body {
-        font-family: "Fira Mono", monospace;
+        font-family: monospace;
         color: var(--text);
         background: var(--background);
       }
@@ -64,18 +46,18 @@
       }
 
       code {
-        font-family: "Fira Mono", monospace;
+        font-family: monospace;
         color: var(--code);
       }
     </style>
   </head>
   <body>
     <main>
-      <h1>Theme color example (fixed)</h1>
+      <h1>Fixed with reduced render-blocking CSS</h1>
       <p>
         Shows how browsers behave when the user's preferred color scheme is
-        <code>dark</code> and the
-        <code>&lt;meta name="theme-color" content="..." /&gt;</code> is set.
+        <code>dark</code> and there is no significant render-blocking CSS (e.g.
+        @font-face rules).
       </p>
       <p>
         To see it broken, visit the <a href="/">index</a> page in a new
